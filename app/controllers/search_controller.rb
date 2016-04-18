@@ -40,7 +40,7 @@ class SearchController < ApplicationController
   private
 
   def load_vars
-    @search_query = params[:q] || ''
+    @search_query = params[:q].split.first || ''
     @search_category = params[:category] || ''
     @search_category = @search_category.to_sym
     @search_page = params[:page].to_i || 1
