@@ -128,7 +128,8 @@ module ApplicationHelper
          </div><div class='pull-right'>
          <div class='row'><div class='col-xs-9 text-left'><h5>
          #{user.full_name}</h5></div><div class='col-xs-3 text-right'>
-         <span class='glyphicon glyphicon-remove' aria-hidden='true'></span>
+         <span class='glyphicon glyphicon-remove popover-remove'
+         aria-hidden='true'></span>
          </div></div><div class='row'><div class='col-xs-12'>
         <p class='user-email'>#{user.email}</p><p>
         #{I18n.t('atwho.popover',
@@ -139,7 +140,7 @@ module ApplicationHelper
 
         raw(image_tag(avatar_path(user, :icon_small),
                       class: 'atwho-user-img-popover')) +
-          raw('<a onClick="$(this).popover(\'show\')" ' \
+          raw('<a onClick="$(this).popover(\'show\');"' \
           'class="atwho-user-popover" data-container="body" ' \
           'data-html="true" tabindex="0" data-trigger="focus" ' \
           'data-placement="top" data-toggle="popover" data-content="') +
